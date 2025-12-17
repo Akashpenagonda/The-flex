@@ -4,12 +4,10 @@ const cors = require("cors");
 const app = express();
 
 // Configure CORS properly
-const corsOptions = {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
-    optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
-app.use(express.json());
+app.use(cors({
+  origin: "*"
+}));
+
 
 // Routes
 const reviewsRoutes = require("./routes/reviews");
