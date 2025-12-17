@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL + "/api/reviews";
+const API = import.meta.env.VITE_API_URL + "/api/google";
+
+const [findingsRes, reviewsRes] = await Promise.all([
+  fetch(`${API}/explore`),
+  fetch(`${API}/mock`)
+]);
 
 
 export default function GoogleExplore() {

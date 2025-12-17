@@ -21,15 +21,15 @@ function ScrollToTop() {
 function NavLink({ to, children, ...props }) {
   const location = useLocation();
   const isActive = location.pathname === to;
-  
+
   const handleClick = () => {
     // Scroll to top when clicking any navbar link
     window.scrollTo(0, 0);
   };
-  
+
   return (
-    <Link 
-      to={to} 
+    <Link
+      to={to}
       onClick={handleClick}
       className={`nav-link ${isActive ? 'primary' : 'secondary'} ${isActive ? 'active' : ''}`}
       {...props}
@@ -44,7 +44,7 @@ function App() {
     <div className="app">
       {/* Scroll to top on route change */}
       <ScrollToTop />
-      
+
       {/* Premium Navbar with Theme Toggle INSIDE */}
       <nav className="navbar">
         <div className="navbar-content">
@@ -52,7 +52,7 @@ function App() {
             <div className="brand-logo">🏠</div>
             <div className="brand-text">FlexLiving Reviews</div>
           </div>
-          
+
           <div className="nav-links">
             <NavLink to="/dashboard">
               📊 Dashboard
@@ -63,15 +63,15 @@ function App() {
             <NavLink to="/google-explore">
               🔍 Google Integration
             </NavLink>
-            <a 
-              href="http://localhost:3001" 
-              target="_blank" 
+            <a
+              href={import.meta.env.VITE_API_URL}
+              target="_blank"
               rel="noopener noreferrer"
-              className="nav-link secondary"
             >
               🔗 API Docs
             </a>
-            
+
+
             {/* Theme Toggle inside navbar */}
             <ThemeToggle />
           </div>
@@ -95,19 +95,19 @@ function App() {
             <p>Professional Review Management System</p>
           </div>
           <div className="footer-links">
-            <Link 
-              to="/dashboard" 
+            <Link
+              to="/dashboard"
               onClick={() => window.scrollTo(0, 0)}
             >
               Dashboard
             </Link>
-            <Link 
+            <Link
               to="/public-reviews"
               onClick={() => window.scrollTo(0, 0)}
             >
               Public Reviews
             </Link>
-            <Link 
+            <Link
               to="/google-explore"
               onClick={() => window.scrollTo(0, 0)}
             >
