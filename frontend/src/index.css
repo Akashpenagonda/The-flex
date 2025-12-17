@@ -4509,3 +4509,10 @@ body {
     font-size: 0.95rem;
   }
 }
+
+.page-actions {
+  display: flex;
+  gap: 12px; /* small, professional gap */
+  justify-content: center;
+  margin-top: 16px;
+}

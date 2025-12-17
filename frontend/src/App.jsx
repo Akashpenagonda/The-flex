@@ -67,9 +67,11 @@ function App() {
               href={import.meta.env.VITE_API_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="nav-link secondary"
             >
               🔗 API Docs
             </a>
+
 
 
             {/* Theme Toggle inside navbar */}
