@@ -1,0 +1,210 @@
+{
+    "status": "success",
+    "result": [
+        {
+            "id": 7451,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Amazing stay, very clean and well located.",
+            "reviewCategory": [
+                {
+                    "category": "cleanliness",
+                    "rating": 9
+                },
+                {
+                    "category": "communication",
+                    "rating": 10
+                },
+                {
+                    "category": "location",
+                    "rating": 10
+                }
+            ],
+            "submittedAt": "2024-01-10 12:30:00",
+            "guestName": "John Miller",
+            "listingName": "2B N1 A - 29 Shoreditch Heights",
+            "approved": true
+        },
+        {
+            "id": 7452,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Good apartment but a bit noisy at night.",
+            "reviewCategory": [
+                {
+                    "category": "cleanliness",
+                    "rating": 8
+                },
+                {
+                    "category": "communication",
+                    "rating": 9
+                },
+                {
+                    "category": "value",
+                    "rating": 7
+                }
+            ],
+            "submittedAt": "2024-02-05 09:15:00",
+            "guestName": "Emma Watson",
+            "listingName": "2B N1 A - 29 Shoreditch Heights",
+            "approved": false
+        },
+        {
+            "id": 7453,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Shane and family are wonderful! Would definitely host again :)",
+            "reviewCategory": [
+                {
+                    "category": "cleanliness",
+                    "rating": 10
+                },
+                {
+                    "category": "communication",
+                    "rating": 10
+                },
+                {
+                    "category": "respect_house_rules",
+                    "rating": 10
+                }
+            ],
+            "submittedAt": "2024-03-01 18:45:00",
+            "guestName": "Shane Finkelstein",
+            "listingName": "2B N1 A - 29 Shoreditch Heights",
+            "approved": false
+        },
+        {
+            "id": 7454,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Great value for money, will book again.",
+            "reviewCategory": [
+                {
+                    "category": "value",
+                    "rating": 9
+                },
+                {
+                    "category": "cleanliness",
+                    "rating": 9
+                },
+                {
+                    "category": "communication",
+                    "rating": 9
+                }
+            ],
+            "submittedAt": "2024-03-20 14:10:00",
+            "guestName": "Carlos Gomez",
+            "listingName": "Studio A - Canary Wharf",
+            "approved": true
+        },
+        {
+            "id": 7455,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Check-in was smooth and host was very responsive.",
+            "reviewCategory": [
+                {
+                    "category": "communication",
+                    "rating": 10
+                },
+                {
+                    "category": "checkin",
+                    "rating": 9
+                }
+            ],
+            "submittedAt": "2024-04-02 11:00:00",
+            "guestName": "Aisha Khan",
+            "listingName": "Studio A - Canary Wharf",
+            "approved": true
+        },
+        {
+            "id": 7456,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Apartment was clean but furniture felt old.",
+            "reviewCategory": [
+                {
+                    "category": "cleanliness",
+                    "rating": 8
+                },
+                {
+                    "category": "comfort",
+                    "rating": 7
+                }
+            ],
+            "submittedAt": "2024-04-15 16:20:00",
+            "guestName": "Michael Brown",
+            "listingName": "1B C - Soho Central",
+            "approved": true
+        },
+        {
+            "id": 7457,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Loved the location and nearby cafes.",
+            "reviewCategory": [
+                {
+                    "category": "location",
+                    "rating": 10
+                },
+                {
+                    "category": "value",
+                    "rating": 9
+                }
+            ],
+            "submittedAt": "2024-05-01 10:40:00",
+            "guestName": "Sophia Lee",
+            "listingName": "1B C - Soho Central",
+            "approved": true
+        },
+        {
+            "id": 7458,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Nice stay overall, minor maintenance issues.",
+            "reviewCategory": [
+                {
+                    "category": "cleanliness",
+                    "rating": 8
+                },
+                {
+                    "category": "maintenance",
+                    "rating": 7
+                }
+            ],
+            "submittedAt": "2024-05-18 19:00:00",
+            "guestName": "Daniel Smith",
+            "listingName": "Penthouse D - London Bridge",
+            "approved": true
+        },
+        {
+            "id": 7459,
+            "type": "guest-to-host",
+            "status": "published",
+            "rating": null,
+            "publicReview": "Fantastic views and very comfortable.",
+            "reviewCategory": [
+                {
+                    "category": "comfort",
+                    "rating": 10
+                },
+                {
+                    "category": "location",
+                    "rating": 10
+                }
+            ],
+            "submittedAt": "2024-06-01 08:30:00",
+            "guestName": "Olivia Martin",
+            "listingName": "Penthouse D - London Bridge",
+            "approved": false
+        }
+    ]
+}
