@@ -3,11 +3,39 @@ const cors = require("cors");
 
 const app = express();
 
-// Configure CORS properly
-app.use(cors({
-  origin: "*"
-}));
+/**
+ * ✅ Allowed frontend origins
+ * - Local development
+ * - Vercel production & preview deployments
+ */
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://the-flex-project.vercel.app",
+  "https://the-flex-sooty.vercel.app",
+  "https://the-flex-ivory.vercel.app"
+];
 
+/**
+ * ✅ CORS Configuration
+ */
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow server-to-server or tools like curl/postman
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true
+  })
+);
+
+// Parse JSON
+app.use(express.json());
 
 // Routes
 const reviewsRoutes = require("./routes/reviews");
@@ -18,33 +46,34 @@ app.use("/api/google", googleRoutes);
 
 // Health check
 app.get("/health", (req, res) => {
-    res.json({
-        status: "ok",
-        timestamp: new Date().toISOString(),
-        service: "Flex Living Reviews API"
-    });
+  res.json({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    service: "Flex Living Reviews API"
+  });
 });
 
+// Root API info
 app.get("/", (req, res) => {
-    res.send(`
+  res.send(`
     <html>
       <head><title>Flex Living API</title></head>
       <body>
         <h1>Flex Living Reviews API</h1>
         <p>Available endpoints:</p>
         <ul>
-          <li><a href="/api/reviews/hostaway">GET /api/reviews/hostaway</a> - All reviews</li>
-          <li><a href="/api/reviews/analytics">GET /api/reviews/analytics</a> - Dashboard analytics</li>
-          <li><a href="/api/google/explore">GET /api/google/explore</a> - Google Reviews findings</li>
-          <li><a href="/health">GET /health</a> - Health check</li>
+          <li><a href="/api/reviews/hostaway">GET /api/reviews/hostaway</a></li>
+          <li><a href="/api/reviews/analytics">GET /api/reviews/analytics</a></li>
+          <li><a href="/api/google/explore">GET /api/google/explore</a></li>
+          <li><a href="/health">GET /health</a></li>
         </ul>
       </body>
     </html>
   `);
 });
 
+// Start server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-    console.log(`✅ Server running on port ${PORT}`);
-    console.log(`🌐 Frontend expected at: ${process.env.FRONTEND_URL || "http://localhost:5173"}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
